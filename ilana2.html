@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <button onclick="AddToDos()">Add</button>
+    <button onclick="RemoveToDos()">Remove</button>
+    <input id="usertitle">
+    <button onclick="SearchToDo()">Search</button>
+
+
+    <p id="Todo"></p>
+    <script>
+
+let ar = [{id:1, priority: 'low', title:'add header'}, {id:2, priority:'high', title:'add footer'}];
+//ar.innerHTML = JSON.stringify(ar);
+
+function AddToDos() {
+//console.log('test')
+ar.push ({id:3, priority:'low', title:'add footer'});
+document.getElementById("Todo").innerHTML=ar;
+console.log(ar);
+
+}; 
+
+AddToDos(ar);
+
+function RemoveToDos() {
+delete ar[2];
+console.log(ar)   
+};
+
+RemoveToDos(ar)
+
+console.log(ar)
+
+function SearchToDo() {
+    ar.title = getelementbyid("usertitle").value
+console.log ('Title: ${ar.title}');
+}
+console.log(ar)
+    </script>
+
+
+</body>
+</html>
